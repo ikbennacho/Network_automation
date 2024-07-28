@@ -1,0 +1,18 @@
+
+- hostname: csw1
+  p2p_wan1: 20.20.20.1
+  p2p_wan2: 20.20.20.9
+  vlan20_csw_ip: 10.120.0.2
+  vlan20_gw_ip: 10.120.0.1
+  vlan30_csw_ip: 10.121.0.2
+  vlan30_gw_ip: 10.121.0.1
+  csw_to_csw: 20.20.20.21
+
+- hostname: csw2
+  p2p_wan1: 20.20.20.6
+  p2p_wan2: 20.20.20.13
+  vlan20_csw_ip: 10.120.0.3
+  vlan20_gw_ip: 10.120.0.1
+  vlan30_csw_ip: 10.121.0.3
+  vlan30_gw_ip: 10.121.0.1
+  csw_to_csw: 20.20.20.22
