@@ -1,0 +1,12 @@
+hostname {{name}}
+!
+interface GigabitEthernet1/0
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 20,30,101
+ switchport mode trunk
+!
+interface GigabitEthernet1/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 20,30,101
+ switchport mode trunk
+!

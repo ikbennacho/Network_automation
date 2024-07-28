@@ -1,0 +1,10 @@
+---
+core:
+    num_workers: 10
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "inventory/hosts.yaml"
+        group_file: null
+        defaults_file: null
+  
