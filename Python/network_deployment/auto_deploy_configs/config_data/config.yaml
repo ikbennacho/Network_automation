@@ -3,21 +3,21 @@ devices:
     hostname: csw1
     p2p_wan1: GigabitEthernet1
     p2p_wan2: Connection to ISP
-    vlan20_csw_ip: 10.120.0.2
-    vlan20_gw_ip: 10.120.0.1
-    vlan30_csw_ip: 10.121.0.2
-    vlan30_gw_ip: 10.120.0.1
-    csw_to_csw: 20.20.20.21
+    vlan20_csw_ip: x.x.x.x
+    vlan20_gw_ip: x.x.x.x
+    vlan30_csw_ip: x.x.x.x
+    vlan30_gw_ip: x.x.x.x
+    csw_to_csw: x.x.x.x
 
   - name: csw2
     hostname: csw2
     p2p_wan1: GigabitEthernet1
     p2p_wan2: Connection to ISP
-    vlan20_csw_ip: 10.120.0.2
-    vlan20_gw_ip: 10.120.0.1
-    vlan30_csw_ip: 10.121.0.2
-    vlan30_gw_ip: 10.120.0.1
-    csw_to_csw: 20.20.20.21
+    vlan20_csw_ip: x.x.x.x
+    vlan20_gw_ip: x.x.x.x
+    vlan30_csw_ip: x.x.x.x
+    vlan30_gw_ip: x.x.x.x
+    csw_to_csw: x.x.x.x
   
   # - name: asw1
   #   hostname: asw1
