@@ -1,0 +1,8 @@
+ username: cisco
+ password: cisco
+ platform: ios
+ port: 22
+ connection_options:
+   netmiko:
+     extras:
+      secret: cisco

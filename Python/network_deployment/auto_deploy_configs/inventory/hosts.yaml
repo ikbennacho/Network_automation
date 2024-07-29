@@ -1,32 +1,12 @@
-hosts:
-  csw1:
-    hostname: x.x.x.x
-    platform: cisco_ios
-    username: cisco
-    password: cisco
-  csw2:
-    hostname: x.x.x.x
-    platform: cisco_ios
-    username: cisco
-    password: cisco
-  # wan_rt1:
-  #   hostname: 192.168.2.142
-  #   platform: cisco_ios
-  #   username: cisco
-  #   password: cisco
-  # wan_rt2:
-  #   hostname: 192.168.2.143
-  #   platform: cisco_ios
-  #   username: cisco
-  #   password: cisco
-  # asw1:
-  #   hostname: 192.168.2.144
-  #   platform: cisco_ios
-  #   username: cisco
-  #   password: cisco
-  # asw2:
-  #   hostname: 192.168.2.145
-  #   platform: cisco_ios
-  #   username: cisco
-  #   password: cisco
+---
+csw1:
+  hostname: 192.168.2.140
+  platform: "ios"
+  groups:
+    - "core-switches"
+csw2:
+  hostname: 192.168.2.141
+  platform: "ios"
+  groups:
+    - "core-switches"
 

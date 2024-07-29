@@ -5,49 +5,59 @@ interface port-channel1
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 20,30,101
  switchport mode trunk
+ no shutdown
 !
 interface GigabitEthernet0/1
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 20,30,101
  switchport mode trunk
  channel-group 1 mode active
+ no shutdown
 !
 interface GigabitEthernet0/2
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 20,30,101
  switchport mode trunk
  channel-group 1 mode active
+ no shutdown
 !
 interface GigabitEthernet1/0
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 20,30,101
  switchport mode trunk
+ no shutdown
 !
 interface GigabitEthernet1/2
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 20,30,101
  switchport mode trunk
+ no shutdown
 !
 interface GigabitEthernet1/1
  no switchport
  ip address {{p2p_wan1}} 255.255.255.252
+ no shutdown
 !
 interface GigabitEthernet1/3
  no switchport
  ip address {{p2p_wan2}} 255.255.255.252
+ no shutdown
 !
 interface Vlan20
  ip address {{vlan20_csw_ip}} 255.255.0.0
  standby 1 ip {{vlan20_gw_ip}}
  standby 1 priority 105
  standby 1 preempt
+ no shutdown
 !
 interface Vlan30
  ip address {{vlan30_csw_ip}} 255.255.0.0
  standby 1 ip {{vlan30_gw_ip}}
  standby 1 priority 105
  standby 1 preempt
+ no shutdown
 !
 interface Vlan101
  ip address {{csw_to_csw}} 255.255.255.252
+ no shutdown
 !
