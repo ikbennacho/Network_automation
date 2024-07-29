@@ -1,11 +1,11 @@
 ---
 csw1:
-  hostname: 192.168.2.140
+  hostname: x.x.x.140
   platform: "ios"
   groups:
     - "core-switches"
 csw2:
-  hostname: 192.168.2.141
+  hostname: x.x.x.141
   platform: "ios"
   groups:
     - "core-switches"
