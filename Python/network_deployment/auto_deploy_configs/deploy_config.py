@@ -7,26 +7,27 @@ import yaml
 # Initialize Nornir
 nr = InitNornir(config_file="nornir_config.yaml")
 
-# Load configuration data from YAML
-with open("config_data/config.yaml") as f:
-    config_data = yaml.safe_load(f)
-
 # Load Jinja2 template
 env = Environment(loader=FileSystemLoader("templates"))
 template = env.get_template("csw_config.j2")
 
-# Render configuration
-config = template.render(config_data)
+# Load configuration data from YAML
+with open("config_data/config.yaml") as f:
+    devices_config = yaml.safe_load(f)
 
 def deploy_config(task: Task) -> Result:
     # Deploy configuration using NAPALM
     result = task.run(task=napalm_configure, configuration=config)
     return Result(host=task.host, result=result.result)
 
-# Run the task on all devices
-result = nr.run(task=deploy_config)
+for device in devices_config:
+    sw_conf = device['hostname'] + '_config.txt'
+    with open(sw_conf, 'w') as f:
+        f.write(template.render(device))
+    
+    # Render configuration
+    config = template.render(device)
 
-# Print the results
-for host, host_result in result.items():
-    print(f"Host: {host}")
-    print(host_result[1].result)
+# Run the task on all devices
+result = nr.run(task=deploy_config)  
+
