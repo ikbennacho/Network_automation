@@ -4,6 +4,6 @@ core-switches:
     - "global"
 global:
   data:
-    ntp_server : "192.168.2.1"
-  username: "cisco"
-  password: "cisco"
+    ntp_server : "x.x.x.1"
+  username: "username"
+  password: "pwd"
